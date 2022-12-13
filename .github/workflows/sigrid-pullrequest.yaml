@@ -14,6 +14,12 @@ jobs:
       - name: Bash
         shell: bash
         run: "echo ${{ github.event.pull_request._links.self.href }}"
+      - name: Bash
+        shell: bash
+        run: "echo ${{ github.event.pull_request.html_url }}"
+      - name: Bash
+        shell: bash
+        run: "echo ${{ github.event.pull_request.diff_url }}"
       - name: Sigrid CI
         uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
