@@ -13,25 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Bash
         shell: bash
-        run: "echo ${{ github.event.pull_request._links.self.href }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.html_url }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.url }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.base.repo.html_url }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.base.ref }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.head.repo.html_url }}"
-      - name: Bash
-        shell: bash
-        run: "echo ${{ github.event.pull_request.head.ref }}"
+        run: "echo ${{ github.event.pull_request.head.repo.html_url }}/blob/${{ github.event.pull_request.head.ref }}/aap.py"
       - name: Sigrid CI
         uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
