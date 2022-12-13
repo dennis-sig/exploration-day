@@ -12,7 +12,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
           customer: opensource
           system: explorationday
@@ -21,5 +21,6 @@ jobs:
       - name: Test pull request comment
         uses: mshick/add-pr-comment@v2
         with:
-          message: "This is a test comment."
+            message-id: sigrid
+            message-path: sigrid-ci-output/feedback.md
           
