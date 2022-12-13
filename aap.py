@@ -10,9 +10,11 @@ def complexMethod(aap):
         return "three"
     elif aap == 4:
         return "four"
-    elif aap == "5"
+    elif aap == 5:
         return "five"
-    elif aap == "6"
+    elif aap == 6:
         return "six"
+    elif aap == 7:
+        return "seven"
     else:
         return "a lot"
