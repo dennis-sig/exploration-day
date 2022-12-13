@@ -18,5 +18,7 @@ def complexMethod(aap):
         return "seven"
     elif aap == 8:
         return "eight"
+    elif aap == 9:
+        return "nine"
     else:
         return "a lot"
