@@ -26,6 +26,12 @@ jobs:
       - name: Bash
         shell: bash
         run: "echo ${{ github.event.pull_request.base.ref }}"
+      - name: Bash
+        shell: bash
+        run: "echo ${{ github.event.pull_request.head.repo.html_url }}"
+      - name: Bash
+        shell: bash
+        run: "echo ${{ github.event.pull_request.head.ref }}"
       - name: Sigrid CI
         uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
