@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+      - name: Bash
+        shell: bash
+        run: "echo ${{ github.event.pull_request._links }}"
       - name: Sigrid CI
         uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
