@@ -20,6 +20,7 @@ jobs:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
       - name: Test pull request comment
         uses: mshick/add-pr-comment@v2
+        if: always()
         with:
           message-id: sigrid
           message-path: sigrid-ci-output/feedback.md
