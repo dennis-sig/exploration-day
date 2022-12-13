@@ -6,13 +6,23 @@ on:
 jobs:
   sigridci:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@markdown-feedback
         with:
           customer: opensource
           system: explorationday
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
+          CODE_LINK_BASE: "${{ github.event.pull_request.head.repo.html_url }}/blob/${{ github.event.pull_request.head.ref }}"
+      - name: Test pull request comment
+        uses: mshick/add-pr-comment@v2
+        if: always()
+        with:
+          message-id: sigrid
+          message-path: sigrid-ci-output/feedback.md
+          
