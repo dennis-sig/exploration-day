@@ -42,11 +42,5 @@ def otherComplexMethod(aap):
         return "six"
     elif aap == 7:
         return "seven"
-    elif aap == 8:
-        return "eight"
-    elif aap == 9:
-        return "nine"
-    elif aap == 10:
-        return "nine"
     else:
         return "a whole lot more"
