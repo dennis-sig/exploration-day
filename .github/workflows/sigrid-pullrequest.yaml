@@ -10,7 +10,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@actionable-markdown-feedback
         with:
           customer: opensource
           system: explorationday
