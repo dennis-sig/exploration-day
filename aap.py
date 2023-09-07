@@ -22,6 +22,8 @@ def complexMethod(aap):
         return "nine"
     elif aap == 10:
         return "nine"
+    elif aap == 11:
+        return "nine"
     else:
         return "a lot"
 
