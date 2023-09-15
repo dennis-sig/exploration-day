@@ -12,8 +12,6 @@ def complexMethod(aap):
         return "four"
     elif aap == 5:
         return "five"
-    elif aap == 6:
-        return "six"
     elif aap == 7:
         return "seven"
     else:
