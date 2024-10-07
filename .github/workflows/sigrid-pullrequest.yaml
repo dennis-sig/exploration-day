@@ -10,9 +10,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@actionable-markdown-feedback
+        uses: Software-Improvement-Group/sigridci@main
         with:
-          customer: opensource
+          customer: sigdelivery
           system: explorationday
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
